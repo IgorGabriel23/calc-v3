@@ -13,4 +13,13 @@ export class FormCalcComponent {
   onClcikSum() {
     this.sum = this.num1 + this.num2;
   }
+  onClcikMulti() {
+    this.sum = this.num1 * this.num2;
+  }
+  onClcikSub() {
+    this.sum = this.num1 - this.num2;
+  }
+  onClcikDiv() {
+    this.sum = this.num1 / this.num2;
+  }
 }
