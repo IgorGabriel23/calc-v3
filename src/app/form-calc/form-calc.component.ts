@@ -40,11 +40,14 @@ export class FormCalcComponent {
         break;
       case '%':
         if(this.num2 >= 0){
-          this.res = (this.num1 / this.num2) * 100;
+          this.res = this.num1 * (this.num2/100);
         }
         else{
           this.res = 0;
         }
+        break;
+      case '^':
+        this.res = Math.pow(this.num1,this.num2);
         break;
       default:
         this.res = 0;
