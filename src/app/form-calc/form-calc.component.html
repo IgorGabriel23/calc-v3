@@ -1,12 +1,10 @@
-<form>
-  <div id="numeros">
+<form id="form"> 
+  <div class="calculadora">
     <input type="number" [(ngModel)]="num1" name="num1" />
-    <input type="number" [(ngModel)]="num2" name="num2" />
     <!-- ngModel: linka o num1 da classe para o HTML-->
-  </div>
   
-  <div id="op">
-    <label for="op">Operação:</label>
+  
+    <label for="op"></label>
     <select [(ngModel)]="op" id="op" name="op">
       <option value="+">+</option>
       <option value="-">-</option>
@@ -15,9 +13,16 @@
       <option value="%">%</option>
       <option value="^">^</option>
     </select>
+  
+
+    <input type="number" [(ngModel)]="num2" name="num2" />
+
+    <div id="button">
+      <button id="resultado" (click)="resultado()">=</button>
+    </div>
+
+    <div id="res">
+      {{ res }}
+    </div>
   </div>
-
-  <button id="resultado" (click)="resultado()">=</button>
-
-  {{ res }}
 </form>

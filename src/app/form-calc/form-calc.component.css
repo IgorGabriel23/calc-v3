@@ -1,0 +1,42 @@
+.calculadora {
+    width: 100px;
+    margin: 0 auto;
+    padding: 100px;
+    border: 1px solid #131212;
+    border-radius: 5px;
+    background-color: #666464;
+}
+
+input{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button{
+    align-self: center;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+select{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 3px;
+    font-size: 13px;
+    border: 2px solid rgb(106, 250, 183);
+    border-radius: 5px;
+}
