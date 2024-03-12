@@ -5,13 +5,21 @@ import { Component } from '@angular/core';
   templateUrl: './form-calc.component.html',
   styleUrl: './form-calc.component.css',
 })
-export class FormCalcComponent {
-  num1: number = 0;
-  num2: number = 0;
-  res: number = 0;
-  op: string = '+';
 
-  resultado(): void{
+export class FormCalcComponent {
+  num1: number;
+  num2: number;
+  res: number;
+  op: string;
+
+  constructor(){
+    this.num1 = 0;
+    this.num2 = 0
+    this.res = 0;
+    this.op = '';
+  }
+
+  resultado(){
     switch (this.op){
       case '+':
         this.res = this.num1 + this.num2;
