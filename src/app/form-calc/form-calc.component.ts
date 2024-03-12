@@ -8,18 +8,38 @@ import { Component } from '@angular/core';
 export class FormCalcComponent {
   num1: number = 0;
   num2: number = 0;
-  sum: number = 0;
+  res: number = 0;
+  op: string = '+';
 
-  onClcikSum() {
-    this.sum = this.num1 + this.num2;
-  }
-  onClcikMulti() {
-    this.sum = this.num1 * this.num2;
-  }
-  onClcikSub() {
-    this.sum = this.num1 - this.num2;
-  }
-  onClcikDiv() {
-    this.sum = this.num1 / this.num2;
+  resultado(): void{
+    switch (this.op){
+      case '+':
+        this.res = this.num1 + this.num2;
+        break;
+      case '*':
+        this.res = this.num1 * this.num2;
+        break;
+      case '-':
+        this.res = this.num1 - this.num2;
+        break;
+      case '/':
+        if(this.num2 >= 0){
+          this.res = this.num1 / this.num2;
+        }
+        else{
+          this.res = 0
+        }
+        break;
+      case '%':
+        if(this.num2 >= 0){
+          this.res = (this.num1 / this.num2) * 100;
+        }
+        else{
+          this.res = 0;
+        }
+        break;
+      default:
+        this.res = 0;
+    }
   }
 }

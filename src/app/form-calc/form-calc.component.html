@@ -1,10 +1,10 @@
 <form>
   <input type="number" [(ngModel)]="num1" name="num1" />
   <input type="number" [(ngModel)]="num2" name="num2" />
-  <button (click)="onClcikSum()">Somar</button>
-  <button (click)="onClcikSub()">Subtrair</button>
-  <button (click)="onClcikMulti()">Multiplicar</button>
-  <button (click)="onClcikDiv()">Dividir</button>
+  <button (click)="onClcikSum()">+</button>
+  <button (click)="onClcikSub()">-</button>
+  <button (click)="onClcikMulti()">*</button>
+  <button (click)="onClcikDiv()">/</button>
   <!-- ngModel: linka o num1 da classe para o HTML-->
 
   {{ sum }}
